@@ -1,4 +1,4 @@
-package Prefix_sufix_Sum;
+package Prefix_sufix_Sum.array;
 
 import java.util.Arrays;
 import java.util.Vector;
