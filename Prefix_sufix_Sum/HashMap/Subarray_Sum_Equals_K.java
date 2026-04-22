@@ -16,8 +16,8 @@ import java.util.HashMap;
 
 public class Subarray_Sum_Equals_K {
     public static void main(String[] args) {
-        int a[]={1,2,3,4};
-        int k=4;
+        int a[]={1,2,3};
+        int k=3;
 
         System.out.println(solution(a,k));
     }
