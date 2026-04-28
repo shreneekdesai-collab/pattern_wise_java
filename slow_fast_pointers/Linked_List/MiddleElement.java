@@ -21,14 +21,19 @@ class ListNode {
     }
 }
 
-public class middle_element {
+public class MiddleElement {
 
     // Function to find middle node
     public static ListNode middleNode(ListNode head) {
+
+        if (head == null) {
+            return null;
+        }
+
         ListNode slow = head;
         ListNode fast = head;
 
-        // Move slow by 1 and fast by 2
+        // Slow moves 1 step, Fast moves 2 steps
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
@@ -37,19 +42,26 @@ public class middle_element {
         return slow;
     }
 
-    // Helper function to print list
+    // Print Linked List
     public static void printList(ListNode head) {
         ListNode temp = head;
+
         while (temp != null) {
-            System.out.print(temp.val + " -> ");
+            System.out.print(temp.val);
+
+            if (temp.next != null) {
+                System.out.print(" -> ");
+            }
+
             temp = temp.next;
         }
-        System.out.println("null");
+
+        System.out.println();
     }
 
     public static void main(String[] args) {
 
-        // Creating linked list: 1 -> 2 -> 3 -> 4 -> 5
+        // 1 -> 2 -> 3 -> 4 -> 5
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
