@@ -21,18 +21,18 @@ public class PivotIndex {
             total += num;
         }
 
-        int left = 0;
+        int leftSum = 0;
 
         // Step 2: check each index
         for (int i = 0; i < nums.length; i++) {
 
-            int right = total - left - nums[i];
+            int right = total - leftSum - nums[i];
 
-            if (left == right) {
+            if (leftSum == right) {
                 return i;
             }
 
-            left += nums[i];
+            leftSum += nums[i];
         }
 
         return -1;
