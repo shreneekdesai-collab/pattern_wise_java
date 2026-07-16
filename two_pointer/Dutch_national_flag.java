@@ -25,7 +25,7 @@ public class Dutch_national_flag {
             }
             else if(num[mid] == 1) {
                 mid++;
-            }
+            }                           
             else {
                 swap(num, mid, high);
                 high--;
